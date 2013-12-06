@@ -179,7 +179,7 @@ var run = function() {
         if ((since == '2008' && sinceMonth <= 5) || since <= '2007') {
             view.earlyAdopter = 1;
         }
-		
+        
         view.userStatus = getUserStatus();
         function getUserStatus() {
             var COEF_REPOS = 2;
@@ -204,10 +204,10 @@ var run = function() {
                 statusScore += EXTRA_POINT_GAIN;
             }
             // - Blog & Email & Location
-        	  if (view.location && view.location != '' && view.email && view.email != '' && data.blog && data.blog != '') {
-        	    statusScore += EXTRA_POINT_GAIN;
-        	  }
-			
+              if (view.location && view.location != '' && view.email && view.email != '' && data.blog && data.blog != '') {
+                statusScore += EXTRA_POINT_GAIN;
+              }
+            
             if (statusScore == FIRST_STEP) {
               return 'Inactive GitHub user';
             }
@@ -227,7 +227,7 @@ var run = function() {
               return 'Passionate GitHub user';
             }
         };
-		
+        
         if (data.blog !== undefined && data.blog !== null && data.blog !== '') {
             view.website = addHttp + data.blog;
         }
